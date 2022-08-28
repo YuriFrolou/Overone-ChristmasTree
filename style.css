@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-size: 20px;
+    line-height: 1.3em;
+}
+
+button,input {
+    border: none;
+    outline: none;
+}
+
+.main-heading {
+    font-variant: small-caps;
+    letter-spacing: 4px;
+    font-style: italic;
+    font-weight: 600;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.task-description {
+    font-size: 28px;
+    font-variant: small-caps;
+    letter-spacing: 4px;
+    font-style: italic;
+    line-height: 1.3em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.workspace{
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.star-container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.star{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(131,137,150,0.5);
+    border-radius: 50%;
+}
+.star.active{
+    background-color: rgba(131,137,150,0.5);
+    animation: change-color 8s ease-in-out 2s infinite alternate forwards;
+}
+
+@media screen and (max-width: 660px) {
+
+    .star {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    .main-heading {
+        font-size: 24px;
+    }
+
+    .star {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes change-color{
+    from{
+        background-color: rgba(131,137,150,0.5);
+    }
+    20%{
+        background-color: rgba(131,137,150,0.8);
+    }
+    40%{
+        background-color: rgba(117,150,117,0.8);
+    }
+    60%{
+        background-color: rgba(40,150,38,0.8);
+    }
+    80%{
+        background-color: rgba(81,150,49,0.8);
+    }
+    to{
+        background-color: rgba(28,150,26,0.8);
+    }
+}
